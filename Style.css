@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top, #1b1b1b, #050505 65%);
+  color: white;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+.game {
+  width: min(720px, 92vw);
+  text-align: center;
+  padding: 40px 0;
+}
+
+.eyebrow {
+  color: #888;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(56px, 12vw, 120px);
+  margin: 10px 0 30px;
+  text-shadow: 0 0 25px rgba(255,255,255,.25);
+}
+
+.panel {
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(16px);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 20px 80px rgba(0,0,0,.45);
+}
+
+.score span {
+  display: block;
+  font-size: 80px;
+  font-weight: 900;
+}
+
+.score small {
+  color: #aaa;
+}
+
+#levelTitle {
+  margin-top: 28px;
+}
+
+#levelText {
+  color: #ccc;
+}
+
+#levelArea {
+  margin-top: 24px;
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  gap: 14px;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-weight: 800;
+  cursor: pointer;
+  background: white;
+  color: black;
+  transition: transform .15s, opacity .15s;
+}
+
+button:hover {
+  transform: scale(1.06);
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+.fake {
+  opacity: .35;
+}
+
+.reset {
+  margin-top: 24px;
+  background: transparent;
+  color: #aaa;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.input {
+  width: min(320px, 100%);
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: #090909;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  gap: 12px;
+}
+
+.tile {
+  height: 70px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.win {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    text-shadow: 0 0 10px white;
+  }
+  to {
+    text-shadow: 0 0 35px white;
+  }
+}
+
+.glitch {
+  animation: glitch .2s linear 5;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  25% { transform: translate(4px, -2px); }
+  50% { transform: translate(-4px, 2px); }
+  75% { transform: translate(2px, 3px); }
+  100% { transform: translate(0); }
+}

@@ -1,1 +1,32 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Hundred Zero</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game">
+    <p class="eyebrow">onehundredzero.no</p>
+    <h1>100 → 0</h1>
 
+    <section class="panel">
+      <div class="score">
+        <span id="counter">100</span>
+        <small>remaining</small>
+      </div>
+
+      <div id="levelBox">
+        <h2 id="levelTitle">Level 1</h2>
+        <p id="levelText">Trykk på riktig knapp for å starte nedtellingen.</p>
+        <div id="levelArea"></div>
+      </div>
+    </section>
+
+    <button id="resetBtn" class="reset">Reset game</button>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
